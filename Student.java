@@ -12,6 +12,8 @@ public class Student {
 
 	}
 
+	
+	
 	public int compareTo(Student other) {
 
 		if (this.gpa > other.gpa)
@@ -27,9 +29,9 @@ public class Student {
 				return -1;
 			else {
 
-				if (this.name.compareTo(other.name) == 1)
+				if (this.name.compareTo(other.name) > 0)
 					return 1;
-				else if (this.name.compareTo(other.name) == -1)
+				else if (this.name.compareTo(other.name) < 0)
 					return -1;
 				else
 					return 0;
@@ -39,6 +41,13 @@ public class Student {
 		}
 
 	}
+
+	@Override
+	public String toString() {
+		return "Student [name=" + name + "]";
+	}
+
+
 
 	public String getName() {
 		return name;
@@ -56,7 +65,7 @@ public class Student {
 		this.indexNumber = indexNumber;
 	}
 
-	public int getGpa() {
+	public double getGpa() {
 		return gpa;
 	}
 
